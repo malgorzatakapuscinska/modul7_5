@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test:html",
-	"test:html": "glob-run nu-html-checker *.html",
-	"init-project": "mkdir -p sass css vendor images js && touch README.md index.html sass/style.scss js/script.js && curl https://raw.github/gitignore/master/Node.gitignore -o .gitignore",
-	"init:dirs": "mkdir -p sass css vendor images js",
-	"init:files": "touch README.md index.html sass/style.scss js/script.js",
-	"init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-	"init:npm-install": "npm install"
+    "test:html": "glob-run nu-html-checker *.html",
+    "init-project": "npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
+    "init:dirs": "mkdir -p sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "init:npm-install": "npm install"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,7 @@
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.23.2",
+    "mkdirp": "^0.5.1",
     "nu-html-checker": "^0.1.0"
   }
 }
