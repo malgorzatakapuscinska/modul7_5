@@ -7,7 +7,7 @@
     "test": "npm run test:html",
     "test:html": "glob-run nu-html-checker *.html",
     "init-project": "npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
-    "init:dirs": "mkdir -p sass css vendor images js",
+    "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "init:npm-install": "npm install"
@@ -22,3 +22,4 @@
     "nu-html-checker": "^0.1.0"
   }
 }
+
