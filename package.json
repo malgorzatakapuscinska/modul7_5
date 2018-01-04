@@ -6,11 +6,18 @@
   "scripts": {
     "test": "npm run test:html",
     "test:html": "glob-run nu-html-checker *.html",
+
     "init-project": " npm run init:npm-install && npm run init:dirs && npm run init:files && npm run init:gitignore",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "init:npm-install": "npm install"
+    "init:npm-install": "npm install",
+
+    "build": "npm run biuld:sass && npm run build:autoprefixer && npm run test",
+    "biuld:sass": "node-sass --output-style compact -o css sass",
+    "build:sass:dev": "node-sass --output-style expanded source-map true -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css"
+
   },
   "keywords": [],
   "author": "",
