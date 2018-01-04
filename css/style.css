@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-size: 18px;
   background-color: lightgrey;
-  padding: 40px; }
+  padding: 40px;
+}
 
 .container {
   background-color: white;
@@ -14,32 +16,46 @@ body {
   border-radius: 20px;
   width: 60%;
   margin: 0 auto;
-  box-shadow: 3px 3px 3px 3px grey; }
+  box-shadow: 3px 3px 3px 3px grey;
+}
 
 div {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 section h1, section h2 {
   text-align: center;
-  padding: 15px 0; }
+  padding: 15px 0;
+}
 
 section h1 {
   text-transform: uppercase;
   font-weight: 24px;
-  text-shadow: 1px 1px 2px black; }
+  text-shadow: 1px 1px 2px black;
+}
 
 section p {
   padding: 10px 50px;
   width: 60%;
   margin: 0 auto;
   line-height: 1.3em;
-  color: green; }
+  color: green;
+}
 
 section p.chorus {
-  padding-left: 70px; }
+  padding-left: 70px;
+}
 
-.class1 {
+.class2 {
   color: red;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
+
+.class3 {
+  color: red;
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
