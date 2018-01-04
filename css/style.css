@@ -14,4 +14,4 @@ section p { padding: 10px 50px; width: 60%; margin: 0 auto; line-height: 1.3em; 
 
 section p.chorus { padding-left: 70px; }
 
-.class1 { color: red; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.class1 { color: green; display: -webkit-box; display: -ms-flexbox; display: flex; }

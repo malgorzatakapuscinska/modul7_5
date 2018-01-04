@@ -6,18 +6,17 @@
   "scripts": {
     "test": "npm run test:html",
     "test:html": "glob-run nu-html-checker *.html",
-
     "init-project": " npm run init:npm-install && npm run init:dirs && npm run init:files && npm run init:gitignore",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "init:npm-install": "npm install",
-
     "build": "npm run biuld:sass && npm run build:autoprefixer && npm run test",
     "biuld:sass": "node-sass --output-style compact -o css sass",
     "build:sass:dev": "node-sass --output-style expanded source-map true -o css sass",
-    "build:autoprefixer": "autoprefixer-cli css/style.css"
-
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "watch:sass": "node-sass --output-style expanded source-map true -o css sass --watch",
+    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +25,8 @@
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.23.2",
     "mkdirp": "^0.5.1",
-    "nu-html-checker": "^0.1.0"
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2"
   }
 }
-
