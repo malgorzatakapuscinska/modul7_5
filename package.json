@@ -18,9 +18,10 @@
     "build:clean": "node_modules/.bin/rimraf css/*.css",
 
 
-    "watch:sassprefixer": "onchange sass -- parallelshell \" npm run watch:sass\"  ",
+    
+    "watch:sassprefixer": "onchange sass -- parallelshell \" npm run watch:sass\" \"npm run watch:autoprefixer\" ",
     "watch:sass": "node-sass --output-style expand --source-map true -o css sass",
-    "watch:autoprefixer": "onchange -d 100 autoprefixer-cli css/style.css",
+    "watch:autoprefixer": "autoprefixer-cli css/style.css",
     "watch:browser-sync": "node_modules/.bin/browser-sync --server --files \"css/*.css,index.html\" "
   },
   "keywords": [],
