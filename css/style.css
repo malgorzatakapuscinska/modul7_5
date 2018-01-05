@@ -22,23 +22,28 @@ div {
 section h1, section h2 {
   text-align: center;
   padding: 15px 0; }
+
 section h1 {
   text-transform: uppercase;
   font-weight: 24px;
   text-shadow: 1px 1px 2px black; }
+
 section p {
   padding: 10px 50px;
   width: 60%;
   margin: 0 auto;
   line-height: 1.3em;
   color: green; }
+
 section p.chorus {
   padding-left: 70px; }
 
-.class1 {
-  color: red;
+.class2 {
+  color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 /*# sourceMappingURL=style.css.map */
